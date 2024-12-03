@@ -51,7 +51,7 @@ local leftTable, rightTable, listLength = split_lists(contents)
 if (runType == "1" or runType == "d" or runType == "distance") then
     table.sort(leftTable)
     table.sort(rightTable)
-    print(calculate_distances(leftTable, rightTable, listLength))
+    print("Total Distance: " .. calculate_distances(leftTable, rightTable, listLength))
 elseif (runType == "2" or runType == "s" or runType == "similarity") then
-    print(calculate_similarity_score(leftTable, rightTable, listLength))
+    print("Similarity Score: " .. calculate_similarity_score(leftTable, rightTable, listLength))
 end
