@@ -149,6 +149,7 @@ end
 
 local file = "input.txt"
 local contents = read_all(file)
+local wordsearchMatrix = build_wordsearch_matrix(contents)
 
 targetWord = "XMAS"
 targetWordLength = string.len(targetWord)
@@ -157,5 +158,5 @@ targetCenter = "A"
 targetCrossAlt1 = "M"
 targetCrossAlt2 = "S"
 
-print("XMAS Matches: " .. parse_wordsearch_matrix(XMAS, build_wordsearch_matrix(contents), string.sub(targetWord, 1, 1)))
-print("X-MAS Matches: " .. parse_wordsearch_matrix(X_MAS, build_wordsearch_matrix(contents), targetCenter))
+print("XMAS Matches: " .. parse_wordsearch_matrix(XMAS, wordsearchMatrix, string.sub(targetWord, 1, 1)))
+print("X-MAS Matches: " .. parse_wordsearch_matrix(X_MAS, wordsearchMatrix, targetCenter))
